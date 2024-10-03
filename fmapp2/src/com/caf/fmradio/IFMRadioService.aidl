@@ -25,6 +25,7 @@ interface IFMRadioService
     boolean scan(int pty);
     boolean seekPI(int piCode);
     boolean searchStrongStationList(int numStations);
+    int[]   getSearchList();
     boolean cancelSearch();
     String getProgramService();
     String getRadioText();
@@ -68,17 +69,17 @@ interface IFMRadioService
     int getAfJmpRmssiTh();
     int getGoodChRmssiTh();
     int getAfJmpRmssiSamplesCnt();
-    String getSocName();
     boolean setRxRepeatCount(int count);
     long getRecordingStartTime();
     boolean isSleepTimerActive();
     boolean isSSRInProgress();
     boolean isRtPlusSupported();
     boolean isA2DPConnected();
+    boolean isSearchInProgress();
+    List getScannedFrequencies();
     boolean getIntfDetLowTh();
     boolean getIntfDetHighTh();
     boolean getRxRepeatCount();
-    boolean getFmStatsProp();
     void restoreDefaults();
 }
 
